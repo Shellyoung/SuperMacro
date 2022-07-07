@@ -84,10 +84,12 @@ function UseAction( id, click, selfcast)
 end
 
 function GetActionText(id)
-	if ( SM_ACTION[id] ) then
-		return SM_ACTION[id];
-	else
-		return oldGetActionText(id);
+	if id then
+		if ( SM_ACTION[id] ) then
+			return SM_ACTION[id];
+		else
+			return oldGetActionText(id);
+		end
 	end
 end
 
